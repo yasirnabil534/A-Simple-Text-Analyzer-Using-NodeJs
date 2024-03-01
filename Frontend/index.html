@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Analyzer</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Text Analyzer</h1>
+        <div id="uploadForm">
+            <input type="file" name="file" id="fileInput" accept=".txt">
+            <button id="word">Number of words</button>
+            <button id="char">Number of characters</button>
+            <button id="sentence">Number of sentences</button>
+            <button id="paragraph">Number of paragraphs</button>
+            <button id="longest">Longest Words</button>
+        </div>
+    </div>
+    <div class="container">
+        <div class="results" id="resultsContainer">
+            <h2>Analysis Results</h2>
+            <p id="wordCount" style="display: none;">Word Count: <span id="wordCountValue"></span></p>
+            <p id="charCount" style="display: none;">Character Count: <span id="charCountValue"></span></p>
+            <p id="sentenceCount" style="display: none;">Sentence Count: <span id="sentenceCountValue"></span></p>
+            <p id="paragraphCount" style="display: none;">Paragraph Count: <span id="paragraphCountValue"></span></p>
+            <p id="longestWords" style="display: none;">Longest Words: <span id="longestWordsValue"></span></p>
+        </div>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+</html>
+
