@@ -1,11 +1,15 @@
-import express from 'express';
-import pkg from 'body-parser';
-const { json } = pkg;
+import bodyParser from 'body-parser';
+import cors from 'cors';
 import 'dotenv/config';
+import express from 'express';
 import router from './src/router/analyzeRouter.js';
 
 const app = express();
-app.use(json());
+app.use(bodyParser.json());
+app.use(cors({
+  origin: "*",
+  methods: "GET, POST, PUT, DELETE, PATCH",
+}));
 
 const port = process.env.PORT || 5000;
 
